@@ -36,9 +36,9 @@
     "predeploy": "npm run build && npm pack",
     "deploy": "./deploy-dbg.sh",
     "build": "npm run wasm && vite build && cp examples/index.html dist/index.html",
-    "dev": "npm run build && vite",
+    "dev": "npm run build && vite --host --port 8080",
     "serve": "npm run dev",
-    "preview": "vite preview",
+    "preview": "vite preview --host --port 8080",
     "test:build": "cd src/core && cargo test --release --features webgl2",
     "test:unit": "vitest run"
   },
